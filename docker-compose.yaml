@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-test
+    environment:
+      POSTGRES_USER: jin
+      POSTGRES_PASSWORD: test1234
+      POSTGRES_DB: test
+    ports:
+      - "5432:5432"
+    # volumes:
+    #   - postgres_data:/var/lib/postgresql/data
+
+  # mssql:
+  #   image: mcr.microsoft.com/mssql/server:2017-latest
+  #   container_name: mssql-test
+  #   environment:
+  #     ACCEPT_EULA: "Y"
+  #     SA_PASSWORD: "YourStrong@Passw0rd"
+  #     MSSQL_PID: "Express"
+  #     MSSQL_DB: "mssql_db"
+  #   ports:
+  #     - "1433:1433"
+    # volumes:
+    #   - mssql_data:/var/opt/mssql
+
+# volumes:
+#   postgres_data:
+#   mssql_data:
