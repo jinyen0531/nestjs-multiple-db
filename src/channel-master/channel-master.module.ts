@@ -5,7 +5,7 @@ import { ChannelMasterController } from './channel-master.controller';
 import { ChannelMasterService } from './channel-master.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([ChannelMaster], 'AZJAW1DPIADB01')],
+  imports: [TypeOrmModule.forFeature([ChannelMaster], process.env.DB2_NAME)],
   providers: [ChannelMasterService],
   controllers: [ChannelMasterController],
 })

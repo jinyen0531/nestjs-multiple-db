@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
-@Entity({ database: 'AZJAW1DPIADB01', name: 'channel_master' })
+@Entity({ database: process.env.DB2_NAME, name: 'channel_master' })
 export class ChannelMaster {
   @PrimaryColumn({ type: 'varchar' })
   channelCode: string;

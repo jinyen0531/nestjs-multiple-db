@@ -6,7 +6,7 @@ import { Repository } from 'typeorm';
 @Injectable()
 export class ChannelMasterService {
   constructor(
-    @InjectRepository(ChannelMaster, 'AZJAW1DPIADB01')
+    @InjectRepository(ChannelMaster, process.env.DB2_NAME)
     private readonly repository: Repository<ChannelMaster>,
   ) {}
 
